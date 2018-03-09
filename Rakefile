@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "generic_file_system"
   gem.homepage = "http://github.com/kaspernj/generic_file_system"
   gem.license = "MIT"
-  gem.summary = %(TODO: one-line summary of your gem)
-  gem.description = %(TODO: longer description of your gem)
+  gem.summary = %(A framework to working with various kinds of file systems the same way)
+  gem.description = %(A framework to working with various kinds of file systems the same way)
   gem.email = "kaspernj@gmail.com"
   gem.authors = ["kaspernj"]
   # dependencies defined in Gemfile
