@@ -82,6 +82,7 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
     semver2 (3.4.2)
+    simple_delegate (0.0.2)
     simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -101,6 +102,7 @@ DEPENDENCIES
   rdoc (~> 3.12)
   rspec (~> 3.5.0)
   rubocop
+  simple_delegate
   simplecov
 
 BUNDLED WITH

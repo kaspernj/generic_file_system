@@ -1,8 +1,9 @@
-class GenericFileSystem::Local::Folder
-  attr_reader :name, :full_path
+class GenericFileSystem::GoogleDrive::Folder
+  include SimpleDelegate
 
-  def initialize(full_path:, name:)
-    @name = name
-    @full_path = full_path
+  delegate :name, to: :folder
+
+  def initialize(file:)
+    @file = file
   end
 end
