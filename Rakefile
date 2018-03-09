@@ -47,7 +47,5 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include("lib/**/*.rb")
 end
 
-if Rails.env.development? || Rails.env.test?
-  require "best_practice_project"
-  BestPracticeProject.load_tasks
-end
+require "best_practice_project"
+BestPracticeProject.load_tasks
