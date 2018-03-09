@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib".freeze]
   s.authors = ["kaspernj".freeze]
   s.date = "2018-03-09"
-  s.description = "TODO: longer description of your gem".freeze
+  s.description = "A framework to working with various kinds of file systems the same way".freeze
   s.email = "kaspernj@gmail.com".freeze
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md",
     "Rakefile",
+    "generic_file_system.gemspec",
     "lib/generic_file_system.rb",
     "lib/generic_file_system/current_dir_tracker.rb",
     "lib/generic_file_system/google_drive.rb",
@@ -41,7 +42,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/kaspernj/generic_file_system".freeze
   s.licenses = ["MIT".freeze]
   s.rubygems_version = "2.6.13".freeze
-  s.summary = "TODO: one-line summary of your gem".freeze
+  s.summary = "A framework to working with various kinds of file systems the same way".freeze
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
