@@ -31,8 +31,10 @@ Gem::Specification.new do |s|
     "lib/generic_file_system.rb",
     "lib/generic_file_system/current_dir_tracker.rb",
     "lib/generic_file_system/google_drive.rb",
+    "lib/generic_file_system/google_drive/file.rb",
     "lib/generic_file_system/google_drive/folder.rb",
     "lib/generic_file_system/local.rb",
+    "lib/generic_file_system/local/file.rb",
     "lib/generic_file_system/local/folder.rb",
     "peak_flow.yml",
     "spec/generic_file_system/local_spec.rb",
@@ -49,6 +51,7 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<best_practice_project>.freeze, [">= 0"])
+      s.add_runtime_dependency(%q<simple_delegate>.freeze, [">= 0"])
       s.add_development_dependency(%q<bundler>.freeze, ["~> 1.0"])
       s.add_development_dependency(%q<jeweler>.freeze, ["= 2.3.9"])
       s.add_development_dependency(%q<rdoc>.freeze, ["~> 3.12"])
@@ -57,6 +60,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<simplecov>.freeze, [">= 0"])
     else
       s.add_dependency(%q<best_practice_project>.freeze, [">= 0"])
+      s.add_dependency(%q<simple_delegate>.freeze, [">= 0"])
       s.add_dependency(%q<bundler>.freeze, ["~> 1.0"])
       s.add_dependency(%q<jeweler>.freeze, ["= 2.3.9"])
       s.add_dependency(%q<rdoc>.freeze, ["~> 3.12"])
@@ -66,6 +70,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<best_practice_project>.freeze, [">= 0"])
+    s.add_dependency(%q<simple_delegate>.freeze, [">= 0"])
     s.add_dependency(%q<bundler>.freeze, ["~> 1.0"])
     s.add_dependency(%q<jeweler>.freeze, ["= 2.3.9"])
     s.add_dependency(%q<rdoc>.freeze, ["~> 3.12"])
