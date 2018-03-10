@@ -1,9 +1,9 @@
-class GenericFileSystem::Local::Folder
-  attr_reader :id, :name, :full_path
+class GenericFileSystem::Local::File
+  def initialize(file:)
+    @file = file
+  end
 
-  def initialize(full_path:, name:, id:)
-    @name = name
-    @full_path = full_path
-    @id = id
+  def name
+    @file.name
   end
 end

@@ -1,9 +1,12 @@
 class GenericFileSystem::Local
   include GenericFileSystem::CurrentDirTracker
 
-  path = "#{File.dirname(__FILE__)}/local"
+  def initialize
+    require_relative "local/file"
+    require_relative "local/folder"
 
-  autoload :Folder, "#{path}/folder"
+    @current_paths = []
+  end
 
   def items(only_files: false, only_folders: false)
     Enumerator.new do |yielder|
@@ -21,5 +24,13 @@ class GenericFileSystem::Local
         end
       end
     end
+  end
+
+  def chdir(path)
+    @current_paths << path
+  end
+
+  def current_path
+    @current_paths.join("/")
   end
 end
