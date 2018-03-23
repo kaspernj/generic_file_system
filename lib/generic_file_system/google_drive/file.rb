@@ -11,4 +11,8 @@ class GenericFileSystem::GoogleDrive::File
   def download(io: StringIO.new)
     @google_drive.service.get_file(@file.id, download_dest: io)
   end
+
+  def modified_at
+    @modified_at ||= Time.zone.parse(@file.modified_time.to_s)
+  end
 end

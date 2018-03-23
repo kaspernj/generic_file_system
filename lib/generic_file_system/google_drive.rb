@@ -12,7 +12,7 @@ class GenericFileSystem::GoogleDrive
   def items(only_files: false, only_folders: false)
     Enumerator.new do |yielder|
       items = service.fetch_all(items: :files) do |token|
-        service.list_files(page_token: token, fields: "nextPageToken, files(id, name, mimeType)", q: path_query)
+        service.list_files(page_token: token, fields: "nextPageToken, files(id, name, mimeType, modified_time)", q: path_query)
       end
 
       count = 0
