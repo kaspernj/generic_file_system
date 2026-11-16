@@ -11,11 +11,11 @@ class GenericFileSystem::Local
   def items(only_files: false, only_folders: false)
     Enumerator.new do |yielder|
       Dir.foreach(current_path) do |file|
-        next if file == "." || file == ".."
+        next if [".", ".."].include?(file)
 
         full_path = "#{current_path}/#{file}"
 
-        if File.directory?(full_path)
+        if ::File.directory?(full_path)
           next if only_files
           yielder << GenericFileSystem::Local::Folder.new(full_path: full_path, name: file)
         else

@@ -1,9 +1,8 @@
-class GenericFileSystem::GoogleDrive::Folder
-  def initialize(file:)
-    @file = file
-  end
+class GenericFileSystem::Local::Folder
+  attr_reader :name
 
-  def name
-    @file.name
+  def initialize(full_path:, name:)
+    @full_path = full_path
+    @name = name
   end
 end

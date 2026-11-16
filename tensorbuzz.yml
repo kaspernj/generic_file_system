@@ -1,0 +1,12 @@
+# The peak_flow graph has one implicit build containing both RSpec and the
+# best-practice checks. Keep the lane broad for every non-documentation change;
+# ordered rules make documentation-only changes terminal skips without hiding
+# application, dependency, or CI configuration changes.
+paths:
+  - "**"
+  - "!**/*.md"
+  - "!docs/**"
+
+script:
+  - bundle exec rspec
+  - bundle exec rake best_practice_project:run
