@@ -5,6 +5,7 @@ AllCops:
     - db/data_schema.rb
     - db/schema.rb
     - spec/dummy/db/schema.rb
+    - generic_file_system.gemspec
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent

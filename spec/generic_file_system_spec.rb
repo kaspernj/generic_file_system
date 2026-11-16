@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + "/spec_helper")
 
 describe "GenericFileSystem" do
-  it "fails" do
-    raise "hey buddy, you should probably rename this file and start specing for real"
+  it "exposes local filesystem support" do
+    expect(GenericFileSystem::Local).to be < Object
   end
 end
