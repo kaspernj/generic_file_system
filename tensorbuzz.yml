@@ -2,6 +2,8 @@
 # best-practice checks. Keep the lane broad for every non-documentation change;
 # ordered rules make documentation-only changes terminal skips without hiding
 # application, dependency, or CI configuration changes.
+rvm: true
+
 paths:
   - "**"
   - "!**/*.md"
