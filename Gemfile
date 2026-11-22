@@ -4,6 +4,7 @@ source "https://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
 
 gem "best_practice_project"
+gem "nokogiri", "~> 1.14.5"
 gem "simple_delegate"
 
 # Add dependencies to develop your gem here.
