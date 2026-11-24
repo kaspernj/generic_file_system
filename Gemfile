@@ -16,6 +16,6 @@ group :development do
   gem "jeweler", "2.3.9"
   gem "rdoc", "~> 3.12"
   gem "rspec", "~> 3.5.0"
-  gem "rubocop", "~> 1.0.0"
+  gem "rubocop", ">= 1.20"
   gem "simplecov", ">= 0"
 end
