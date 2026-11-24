@@ -10,7 +10,7 @@ AllCops:
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
 Layout/EmptyLines:
@@ -43,15 +43,11 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Max: 10
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 160
 
 Metrics/MethodLength:
   Max: 50
-
-# .find_each is not the same as .each
-Rails/FindEach:
-  Enabled: false
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
