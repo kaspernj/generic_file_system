@@ -20,10 +20,12 @@ class GenericFileSystem::GoogleDrive
 
         if file.mime_type == "application/vnd.google-apps.folder"
           next if only_files
-          yielder << GenericFileSystem::GoogleDrive::Folder.new(file: file)
+
+          yielder << GenericFileSystem::GoogleDrive::Folder.new(file:)
         else
           next if only_folders
-          yielder << GenericFileSystem::GoogleDrive::File.new(google_drive: self, file: file)
+
+          yielder << GenericFileSystem::GoogleDrive::File.new(google_drive: self, file:)
         end
       end
     end

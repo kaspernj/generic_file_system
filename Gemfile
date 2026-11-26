@@ -4,7 +4,10 @@ source "https://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
 
 gem "best_practice_project"
+gem "nokogiri", "~> 1.14.5"
+gem "parser", "~> 3.1.0"
 gem "simple_delegate"
+gem "unicode-display_width", ">= 1.4.0"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
@@ -13,6 +16,6 @@ group :development do
   gem "jeweler", "2.3.9"
   gem "rdoc", "~> 3.12"
   gem "rspec", "~> 3.5.0"
-  gem "rubocop"
+  gem "rubocop", ">= 1.20"
   gem "simplecov", ">= 0"
 end

@@ -17,10 +17,12 @@ class GenericFileSystem::Local
 
         if ::File.directory?(full_path)
           next if only_files
-          yielder << GenericFileSystem::Local::Folder.new(full_path: full_path, name: file)
+
+          yielder << GenericFileSystem::Local::Folder.new(full_path:, name: file)
         else
           next if only_folders
-          yielder << GenericFileSystem::Local::File.new(full_path: full_path, name: file)
+
+          yielder << GenericFileSystem::Local::File.new(full_path:, name: file)
         end
       end
     end
